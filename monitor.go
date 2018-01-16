@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"net/http"
-	"time"
 
 	"github.com/gregdel/pushover"
 )
@@ -12,11 +11,8 @@ var (
 	ErrResponse = errors.New("HTTP error response")
 )
 
-func checkStatus(url string, timeout time.Duration) error {
-	client := http.Client{
-		Timeout: timeout,
-	}
-	res, err := client.Head(url)
+func checkStatus(url string) error {
+	res, err := http.Head(url)
 	if err != nil {
 		return err
 	}
