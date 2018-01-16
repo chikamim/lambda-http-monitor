@@ -9,3 +9,5 @@ aws cloudformation deploy \
     --template-file .template.yml \
     --stack-name lambda-http-monitor \
     --capabilities CAPABILITY_IAM
+aws cloudformation describe-stack-resources --stack-name lambda-http-monitor
+echo "aws lambda invoke --function-name lambda-http-monitor-App-xxxxxx" out.txt

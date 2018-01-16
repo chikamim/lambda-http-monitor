@@ -11,3 +11,6 @@ Resources:
       Environment:
         Variables:
           URL: http://www.amazon.com
+          TIMEOUT_SEC: 2.0
+          PUSHOVER_APIKEY: apikey
+          PUSHOVER_USERKEY: userkey
